@@ -13,7 +13,7 @@ let main argv =
     let loadedScript = script.Load(redis.GetServer("localhost:10000"))
     let readval = async { 
                           let! a = loadedScript.EvaluateAsync(redis.GetDatabase(), 
-                                        {key=(~~"bjartwolf2"); value="this is big redis and all"}) 
+                                        {key=(~~"bjartwolf2"); value="hello world"}) 
                                         |> Async.AwaitTask
                           let! x = db.StringGetAsync(~~"bjartwolf2") 
                                         |> Async.AwaitTask
