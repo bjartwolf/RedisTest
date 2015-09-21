@@ -20,6 +20,6 @@ let main argv =
                           printfn "%A" (x.ToString())
                         }
     readval |> Async.Start 
-    Console.ReadKey() |> ignore
+    Console.ReadKey().Key |> ignore
     p.Kill()
     0 
